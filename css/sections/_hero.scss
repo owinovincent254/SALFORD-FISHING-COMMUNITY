@@ -1,0 +1,56 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+.hero {
+  gap: 2em;
+  background-repeat: no-repeat;
+  height: 80vh;
+  // width:100vw;
+  position: relative;
+  @include flex(center, center, column);
+
+  &__container {
+    @include flex(center, center);
+    h1 {
+      text-align: center;
+      font-size: 5rem;
+      margin-top: 3rem;
+      color:white;
+    }
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-top: 3rem;
+      color: white;
+    }
+    &__content {
+      &__button {
+        @include flex(space-around, center);
+        width: 50%;
+        margin: 3em auto;
+        &--blue {
+          @include button($white, $orange);
+          padding: 1.5em 3.5em;
+        }
+        &--red {
+          @include button($white, $light-grey);
+          padding: 1.5em 3.5em;
+        }
+      }
+
+      &__video {
+        width: 100%;
+        height: 80vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        video {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center center;
+        }
+      }
+    }
+  }
+}

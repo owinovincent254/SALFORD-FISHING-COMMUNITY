@@ -1,0 +1,41 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+.nav{
+    background-color:$grey;
+  padding: 1em 2em;
+  position: sticky;
+  z-index: 3;
+  width: 100%;
+  top: 0;
+    &__container{
+@include flex(space-between,flex-start);
+&__left{
+    ul{
+        @include flex(space-between,flex-start);
+        li{
+            list-style-type: none;
+            font-size: 1.2rem;
+            color:$white;
+        }
+    }
+}
+&__right{
+    ul{
+@include flex(space-between,flex-start);
+        li{
+         list-style-type: none; 
+         padding: 3em; 
+         font-size: 1.2rem;
+        }
+
+        li a{
+            text-decoration: none;
+            color:$black;
+        }
+        
+    }
+
+}
+
+    }
+}

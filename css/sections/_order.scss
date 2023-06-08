@@ -1,0 +1,82 @@
+@use "../utilities/variables" as*;
+@use "../utilities/mixins" as*;
+.order{
+    background-image: url(../../images/sebastian.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+
+    h3{
+        text-align: center;
+        font-size: 3rem;
+        color: $black;
+    }
+    h2{
+        text-align: center;
+        margin:1.5em;
+        font-size: 2rem;
+        color: $black;
+    }
+    
+    &__container{
+        &__service{
+            @include flex(center,center);
+            padding: 2em;
+            input{
+                padding: 1em 2em 1em 2em;
+                outline: none;
+            }
+        }
+        
+       
+    &__details{
+        @include flex(center,center);
+        gap: 20em;
+        input{
+            padding: 1em 2em;
+            outline: none;
+            
+        }
+    }
+    &__email{
+        @include flex(center,center); 
+        gap: 20em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        input{
+            padding: 1em 2em;
+            outline: none;
+    
+        }
+    }
+    &__line{
+        @include flex(center,center); 
+        gap: 20em;
+        margin-top: 1em;
+        input{
+            padding: 1em 2em;
+            outline: none;
+            margin-bottom: 1em;
+            
+        }
+        .fish{
+            margin-top: 1em;
+        } 
+    }
+    &__button{
+        @include flex(center,center);
+        button{
+        padding:2em 2em;
+        margin-top: 1em;
+        border: none;
+        color: white;
+        background-color: orange;
+        outline: none;
+        margin-bottom: 1em;
+        border-radius: 50%;
+    }
+    }
+
+    }
+}

@@ -1,0 +1,43 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+.aims {
+  h5 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    span {
+      color: $orange;
+    }
+  }
+  &__container {
+    @include flex(space-between, center);
+    &__card {
+      width: 30%;
+      box-shadow: 0px 0px 3px $grey;
+      height: 55vh;
+      background-color: $light-grey;
+      &__content {
+        padding: 1em;
+        text-align: center;
+        color: $black;
+        margin-bottom: 2em;
+        p {
+          font-size: 1.2rem;
+          color: $white;
+        }
+        h4 {
+          color: $black;
+          font-size: 2rem;
+          margin-bottom: 1.5rem;
+        }
+      }
+      &__image {
+        // @include flex(center, center);
+        img{
+            width: 100%;
+        }
+      }
+    }
+  }
+}

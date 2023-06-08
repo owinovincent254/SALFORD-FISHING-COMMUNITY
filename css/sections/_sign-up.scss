@@ -1,0 +1,40 @@
+@use "../utilities/variables" as*;
+@use "../utilities/mixins" as*;
+.signup{
+  background-image: url(../../images/jakub.jpg);
+  // background-position: center;
+  //   background-size: cover;
+  //   background-repeat: no-repeat;
+  h2{
+    text-align: center;
+    font-size: 3rem;
+    color:black;
+  }
+  &__container{
+    @include flex(center,center,column);
+    input{
+      padding: 1.8em  7em;
+      margin: 1.8em;
+      outline: none;
+    }
+    button{
+      padding: 2em 2em;
+      margin-bottom: 1em;
+      background-color:grey;
+      border:none;
+      color:$white;
+      border-radius: 70%;
+    }
+    p{
+      font-size: 2rem;
+      color: black;
+    }
+    div{
+      @include flex(center,center);
+      p{
+        margin-left: -.5em;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

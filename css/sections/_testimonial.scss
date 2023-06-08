@@ -1,0 +1,41 @@
+@use "../utilities/variables" as*;
+@use "../utilities/mixins" as*;
+.testimonial{
+    h6{
+        text-align: center;
+        font-size: 3rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        span{
+            color: $light-grey;
+        }
+    }
+    &__container{
+        @include flex(space-between,center);
+        &__card{
+            width:30%;
+            box-shadow:0px 0px 3px $grey;
+            height: 70vh;
+            background-color: $light-grey;
+            
+            &__image{
+                // @include flex(center,center);
+                img{
+                    width: 100%;
+                }
+            }
+            &__content{
+                p{
+                    margin-top: 2em;
+                    font-size: 1rem;
+                    color:$white;
+                    padding: 1em;
+                }
+                h2{
+                    color:$black;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

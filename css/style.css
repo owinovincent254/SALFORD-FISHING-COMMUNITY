@@ -1,0 +1,436 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.flex-item-container {
+  width: 80%;
+}
+
+.nav {
+  background-color: #808080;
+  padding: 1em 2em;
+  position: sticky;
+  z-index: 3;
+  width: 100%;
+  top: 0;
+}
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+}
+.nav__container__left ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+}
+.nav__container__left ul li {
+  list-style-type: none;
+  font-size: 1.2rem;
+  color: #fff;
+}
+.nav__container__right ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+}
+.nav__container__right ul li {
+  list-style-type: none;
+  padding: 3em;
+  font-size: 1.2rem;
+}
+.nav__container__right ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.signup {
+  background-image: url(../../images/jakub.jpg);
+}
+.signup h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: black;
+}
+.signup__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.signup__container input {
+  padding: 1.8em 7em;
+  margin: 1.8em;
+  outline: none;
+}
+.signup__container button {
+  padding: 2em 2em;
+  margin-bottom: 1em;
+  background-color: grey;
+  border: none;
+  color: #fff;
+  border-radius: 70%;
+}
+.signup__container p {
+  font-size: 2rem;
+  color: black;
+}
+.signup__container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.signup__container div p {
+  margin-left: -0.5em;
+  font-size: 1.5rem;
+}
+
+.signin {
+  background-image: url(../../images/jakub.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.signin h3 {
+  text-align: center;
+  font-size: 3rem;
+}
+.signin p {
+  text-align: center;
+  font-size: 3rem;
+  margin: 0.5em 0.5em;
+}
+.signin hr {
+  color: orange;
+}
+.signin__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.signin__container__name {
+  margin: 1em;
+}
+.signin__container__name input {
+  outline: none;
+  padding: 1.8em 7em;
+}
+.signin__container__password {
+  margin: 1em;
+}
+.signin__container__password input {
+  outline: none;
+  padding: 1.8em 7em;
+}
+.signin__container__password h4 {
+  font-size: 1rem;
+}
+.signin__container__confirm {
+  margin: 1em;
+}
+.signin__container__confirm input {
+  outline: none;
+  padding: 1.8em 7em;
+}
+.signin__container h4 {
+  font-size: 2rem;
+  color: white;
+}
+.signin__container h4 span {
+  color: orange;
+  font-weight: 100;
+  margin-bottom: 2em;
+  font-size: 2rem;
+}
+.signin__container button {
+  padding: 2em 2em;
+  margin-bottom: 1em;
+  color: #000;
+  background-color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+}
+
+.hero {
+  gap: 2em;
+  background-repeat: no-repeat;
+  height: 80vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.hero__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.hero__container h1 {
+  text-align: center;
+  font-size: 5rem;
+  margin-top: 3rem;
+  color: white;
+}
+.hero__container h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 3rem;
+  color: white;
+}
+.hero__container__content__button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  width: 50%;
+  margin: 3em auto;
+}
+.hero__container__content__button--blue {
+  padding: 1em;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #eea539;
+  padding: 1.5em 3.5em;
+}
+.hero__container__content__button--red {
+  padding: 1em;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #537188;
+  padding: 1.5em 3.5em;
+}
+.hero__container__content__video {
+  width: 100%;
+  height: 80vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.hero__container__content__video video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+.aims h5 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.aims h5 span {
+  color: #eea539;
+}
+.aims__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.aims__container__card {
+  width: 30%;
+  box-shadow: 0px 0px 3px #808080;
+  height: 55vh;
+  background-color: #537188;
+}
+.aims__container__card__content {
+  padding: 1em;
+  text-align: center;
+  color: #000;
+  margin-bottom: 2em;
+}
+.aims__container__card__content p {
+  font-size: 1.2rem;
+  color: #fff;
+}
+.aims__container__card__content h4 {
+  color: #000;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.aims__container__card__image img {
+  width: 100%;
+}
+
+.testimonial h6 {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.testimonial h6 span {
+  color: #537188;
+}
+.testimonial__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.testimonial__container__card {
+  width: 30%;
+  box-shadow: 0px 0px 3px #808080;
+  height: 70vh;
+  background-color: #537188;
+}
+.testimonial__container__card__image img {
+  width: 100%;
+}
+.testimonial__container__card__content p {
+  margin-top: 2em;
+  font-size: 1rem;
+  color: #fff;
+  padding: 1em;
+}
+.testimonial__container__card__content h2 {
+  color: #000;
+  text-align: center;
+}
+
+.footer {
+  background-color: #808080;
+}
+.footer__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: row;
+}
+.footer__container__content ul {
+  background-color: #537188;
+}
+.footer__container__content ul li {
+  list-style-type: none;
+  padding: 1em;
+}
+.footer__container__content h3 {
+  text-align: center;
+  margin-top: 1em;
+  font-size: 2rem;
+  color: #000;
+}
+.footer__container__content h2 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-size: 2rem;
+}
+.footer__container__content h2 span {
+  color: orange;
+}
+.footer__container__content p {
+  font-size: 1rem;
+  color: #fff;
+  margin-top: 1em;
+}
+
+.order {
+  background-image: url(../../images/sebastian.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+.order h3 {
+  text-align: center;
+  font-size: 3rem;
+  color: #000;
+}
+.order h2 {
+  text-align: center;
+  margin: 1.5em;
+  font-size: 2rem;
+  color: #000;
+}
+.order__container__service {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 2em;
+}
+.order__container__service input {
+  padding: 1em 2em 1em 2em;
+  outline: none;
+}
+.order__container__details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 20em;
+}
+.order__container__details input {
+  padding: 1em 2em;
+  outline: none;
+}
+.order__container__email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 20em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.order__container__email input {
+  padding: 1em 2em;
+  outline: none;
+}
+.order__container__line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 20em;
+  margin-top: 1em;
+}
+.order__container__line input {
+  padding: 1em 2em;
+  outline: none;
+  margin-bottom: 1em;
+}
+.order__container__line .fish {
+  margin-top: 1em;
+}
+.order__container__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.order__container__button button {
+  padding: 2em 2em;
+  margin-top: 1em;
+  border: none;
+  color: white;
+  background-color: orange;
+  outline: none;
+  margin-bottom: 1em;
+  border-radius: 50%;
+}

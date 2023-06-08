@@ -1,0 +1,36 @@
+@use "../utilities/variables" as*;
+@use "../utilities/mixins" as*;
+.footer{
+    background-color: $grey;
+    &__container{
+        @include flex(space-around,flex-start);
+        &__content{
+            ul{
+                background-color: $light-grey;
+                li{
+                    list-style-type: none;
+                    padding: 1em;
+                }
+            }
+            h3{
+text-align: center;
+margin-top: 1em;
+font-size: 2rem;
+color: $black;
+            }
+            h2{
+                margin-top: 1em;
+            span{
+                color:orange;
+            }
+margin-bottom: 0.5em;
+font-size: 2rem;
+            }
+            p{
+                font-size: 1rem;
+                color: $white;
+                margin-top: 1em;
+            }
+        }
+    }
+}
