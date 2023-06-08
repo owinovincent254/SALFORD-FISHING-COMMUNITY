@@ -24,14 +24,12 @@ else{
 user.map(item=>{
 
     if(userData.fullName === item.fullName && userData.password === item.password) {
-        alert('You have successfully logged in.');
+        alert('You have successfully signed in.');
         window.location="index.html"
     
     } else {
         alert("Invalid Credentials")
     }
 })
-
- 
 }
 })
