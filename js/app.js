@@ -41,14 +41,6 @@ else{
 
 
 }
-// function store(){
-//     localStorage.setItem('fullName',fullName.value);
-//     localStorage.setItem('enterPassword',enterPassword.value);
-// }
-// function check(){
-// const fullName=localStorage.getItem('fullName');
-// const enterPassword=localStorage.getElementById('enterPassword');
-// }
 
 })
 

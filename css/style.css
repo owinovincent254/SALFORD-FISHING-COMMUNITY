@@ -20,7 +20,7 @@ a {
 
 .nav {
   background-color: #808080;
-  padding: 1em 2em;
+  padding: 1em 1em;
   position: sticky;
   z-index: 3;
   width: 100%;

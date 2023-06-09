@@ -32,43 +32,45 @@
     <section class="order">
       <h3>Order Fish</h3>
       <h2>Ordering Details</h2>
-      
-      <div class="container">
-        <div class="order__container">
-          <div class="order__container__service">
-            <input type="text" placeholder="service" id="service">
+      <form id="order-form">
+
+        <div class="container">
+          <div class="order__container">
+            <div class="order__container__service">
+              <input type="text" placeholder="service" id="service" name="input_service">
+            </div>
+            <div class="order__container__details">
+              <div class="name">       
+              <input type="text" placeholder="First Name"  id="first" name="input_first"/>
           </div>
-          <div class="order__container__details">
-            <div class="name">       
-            <input type="text" placeholder="First Name"  id="first"/>
-        </div>
-        <div class="input">
-            <input type="text" placeholder="Last Name" id="last" />
+          <div class="input">
+              <input type="text" placeholder="Last Name" id="last" name="input_last" />
+              </div>
+            </div>
+            <div class="order__container__email">
+              <div>
+              <input type="text" placeholder="Email Address" id="email" name="input_email"/>
+          </div>
+          <div>
+              <input type="text" placeholder="Street Address" id="street" name="input_street"/>
+          </div>
+            </div>
+            <div class="order__container__line">
+              <div>
+                  <input type="text" placeholder="Phone Number" id="number" name="input_number"/>
+            </div>
+            <div class="fish">
+  
+              <input type="text"  placeholder="Fish Quantity" id="quantity" name='input_quantity'/>
+              
+          </div>
+            </div>
+            <div class="order__container__button">
+            <button id="submit" type="submit"  onsubmit="handleForm()">Submit</button>
             </div>
           </div>
-          <div class="order__container__email">
-            <div>
-            <input type="text" placeholder="Email Address" id="email"/>
-        </div>
-        <div>
-            <input type="text" placeholder="Street Address" id="street"/>
-        </div>
           </div>
-          <div class="order__container__line">
-            <div>
-                <input type="text" placeholder="Phone Number" id="number"/>
-          </div>
-          <div class="fish">
-
-            <input type="text"  placeholder="Fish Quantity" id="quantity"/>
-            
-        </div>
-          </div>
-          <div class="order__container__button">
-          <button id="submit">Submit</button>
-          </div>
-        </div>
-        </div>
+      </form>
       </div>
     </section>
     <section class="footer">
@@ -108,7 +110,44 @@
 
   </section>
   <script src="js/order.js">
+    
 
   </script>
+
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("L1QPyCmLsKz9hIJH7");
+   })();
+
+
+</script>
+
+<script>
+  const submitButton = document.getElementById("submit");
+
+  submitButton.addEventListener("click", ()=>{
+    handleForm()
+  })
+  const handleForm = async (e) => {
+    try {
+
+   const templateParams = {
+    message:"Hello, there"
+   }
+
+  //  emailjs.send('service_ezckmrv', 'service_ezckmrv', templateParams, 'L1QPyCmLsKz9hIJH7');
+      await emailjs.sendForm('service_ezckmrv', 'template_l8e6q2c', document.getElementById('order-form'));
+      alert('email sent!');
+    } catch (error) {
+      console.error(error);
+      alert('Failed to send email');
+    }
+  };
+</script>
+
   </body>
 </html>
