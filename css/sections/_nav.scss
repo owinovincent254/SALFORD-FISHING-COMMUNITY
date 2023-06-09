@@ -2,22 +2,14 @@
 @use "../utilities/mixins" as *;
 .nav{
     background-color:$grey;
-  padding:1em 1em;
   position: sticky;
   z-index: 3;
   width: 100%;
   top: 0;
     &__container{
-@include flex(space-between,flex-start);
+@include flex(space-between,flex-start,center);
 &__left{
-    ul{
-        @include flex(space-between,flex-start);
-        li{
-            list-style-type: none;
-            font-size: 1.2rem;
-            color:$white;
-        }
-    }
+    margin-top: 1.5em;
 }
 &__right{
     ul{
